@@ -9,7 +9,7 @@ Given that we [use `loadCSS` to asynchronously load a stylesheet containing all 
 
 ## Requirements
 
-1. Must not make an HTTP request to a remove server, anything using a remote test file was out.
+1. Must not make an HTTP request to a remote server, anything using a remote test file was out.
 1. Prefer a synchronous approach to an asynchronous one, we want it to execute and the result to be available immediately.
 1. More than just an inference. It was suggested that we could infer based on the existence of the [Font Loading API](http://caniuse.com/#feat=font-loading) given that it currently matches support for [WOFF2](http://caniuse.com/#feat=woff2). But what happens if a browser implements the Font Loading API but doesn’t implement WOFF2? This scenario seemed entirely possible and we didn’t want any false positives.
 
