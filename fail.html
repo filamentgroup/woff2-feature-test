@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+	<div id="supported">This should say “Did fail.”</div>
+	<script>
+	var supportsImaginaryFormat = (function( win ){
+		if( !( "FontFace" in win ) ) {
+			return false;
+		}
+
+		var f = new win.FontFace( "t", 'url( "data:font/woff2;base64," ) format( "imaginaryformat" )' );
+		f.load();
+
+		return f.status == 'loading';
+	})( this );
+
+	if( !supportsImaginaryFormat ) {
+		document.getElementById( "supported" ).innerHTML = "Did fail.";
+	}
+	</script>
+</body>
+</html>
