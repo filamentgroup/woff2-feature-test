@@ -20,3 +20,13 @@ We use the Font Loading API to load an empty WOFF2 data URI and see if the font 
 ## [Demo](http://filamentgroup.github.io/woff2-feature-test/test.html)
 
 If a browser eventually implements the WOFF2 format but does not implement the Font Loading API, this script will report a false negative (which is preferable to the false positive scenarios described above).
+
+## Limitations
+
+Note that if you use a restrictive [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#font-src) header on `font-src`, that can cause issues with this feature test.
+
+For example, github.com (not github.io) uses `Content-Security-Policy:default-src *; font-src assets-cdn.github.com;` which denies our `@font-face` Data URI.
+
+## Addendum
+
+A few previous revisions of this script can be found [on a gist](https://gist.github.com/zachleat/68611e730f6c2280e8c9).
