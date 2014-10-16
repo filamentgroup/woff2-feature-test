@@ -7,6 +7,17 @@ A simple feature test for the WOFF2 font format.
 
 Given that we [use `loadCSS` to asynchronously load a stylesheet containing all of our typefaces as data URIs](https://github.com/filamentgroup/loadCSS#usage-example-with-content-fonts), we need a way to programmatically determine if the WOFF2 format is supported in the browser.
 
+```
+var fontFile = "/url/to/woff.css";
+
+// Use WOFF2 if supported
+if( supportsWoff2 ) {
+	fontFile = "/url/to/woff2.css";
+}
+
+loadCSS( fontFile );
+```
+
 ## Requirements
 
 1. Must not make an HTTP request to a remote server, anything using a remote test file was out.
