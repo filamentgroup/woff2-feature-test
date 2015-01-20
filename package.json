@@ -1,0 +1,22 @@
+{
+  "name": "woff2-feature-test",
+  "version": "1.0.0",
+  "description": "A simple feature test for the WOFF2 font format",
+  "main": "woff2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/filamentgroup/woff2-feature-test.git"
+  },
+  "keywords": [
+    "woff2"
+  ],
+  "author": "Filament Group <hello@filamentgroup.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filamentgroup/woff2-feature-test/issues"
+  },
+  "homepage": "https://github.com/filamentgroup/woff2-feature-test"
+}
