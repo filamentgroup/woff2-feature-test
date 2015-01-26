@@ -4,7 +4,7 @@ var supportsWoff2 = (function( win ){
 	}
 
 	var f = new win.FontFace( "t", 'url( "data:application/font-woff2," ) format( "woff2" )', {} );
-	f.load();
+	f.load().catch(function() {});
 
 	return f.status == 'loading';
 })( this );
