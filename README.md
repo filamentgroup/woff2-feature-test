@@ -3,6 +3,8 @@ woff2-feature-test
 
 A simple feature test for the WOFF2 font format.
 
+* Available on [NPM as `woff2-feature-test`](https://www.npmjs.com/package/woff2-feature-test)
+
 ## Use Case
 
 Given that we [use `loadCSS` to asynchronously load a stylesheet containing all of our typefaces as data URIs](https://github.com/filamentgroup/loadCSS#usage-example-with-content-fonts), we need a way to programmatically determine if the WOFF2 format is supported in the browser.
