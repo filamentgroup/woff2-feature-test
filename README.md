@@ -3,6 +3,8 @@ woff2-feature-test
 
 A simple feature test for the WOFF2 font format.
 
+* Available on [NPM as `woff2-feature-test`](https://www.npmjs.com/package/woff2-feature-test)
+
 ## Use Case
 
 Given that we [use `loadCSS` to asynchronously load a stylesheet containing all of our typefaces as data URIs](https://github.com/filamentgroup/loadCSS#usage-example-with-content-fonts), we need a way to programmatically determine if the WOFF2 format is supported in the browser.
@@ -35,6 +37,8 @@ If a browser eventually implements the WOFF2 format but does not implement the F
 ## Limitations
 
 Note that if you use a restrictive [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#font-src) header on `font-src`, that can cause issues with this feature test.
+
+You’ll also need to make sure your [Content Security Policy allows Data URIs](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#Data).
 
 For example, github.com (not github.io) uses `Content-Security-Policy:default-src *; font-src assets-cdn.github.com;` which denies our `@font-face` Data URI.
 
