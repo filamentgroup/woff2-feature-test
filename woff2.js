@@ -1,5 +1,5 @@
 var supportsWoff2 = (function( win ){
-	if( !( "FontFace" in win ) ) {
+	if( !win.FontFace ) {
 		return false;
 	}
 
