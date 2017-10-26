@@ -1,6 +1,6 @@
 {
   "name": "woff2-feature-test",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple feature test for the WOFF2 font format",
   "main": "woff2.js",
   "scripts": {
