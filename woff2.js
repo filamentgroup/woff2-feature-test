@@ -1,5 +1,5 @@
-var supportsWoff2 = (function( win ){
-	if( !( "FontFace" in win ) ) {
+var supportsWoff2 = (function(){
+	if( !( "FontFace" in window ) ) {
 		return false;
 	}
 
@@ -7,4 +7,4 @@ var supportsWoff2 = (function( win ){
 	f.load()['catch'](function() {});
 
 	return f.status == 'loading' || f.status == 'loaded';
-})( this );
+})();
